@@ -27,7 +27,7 @@ nums = [3, 4, 7, 8, 11, 2, 15]
 target = 9  
 function indices(first, second){
     for (let i = 0; i < first.length; i++){
-        for (let j= 1; j < first.length; j++){
+        for (let j= i + 1; j < first.length; j++){
             if (first[i]+first[j]==second)
                 return [i, j]
         }
@@ -51,7 +51,41 @@ function duplicate(arrays){
 console.log(duplicate(input))
 
 
+// nums1 = [3, 4, 7, 8, 11, 2, 15]
+// target1 = 9  
+// function dup(one, two){
+//     for(let index in one){
+//         if (one[index] + one[index-1] === two)
+//             return index, index-1
+//     }
+// }
+// console.log(dup(nums1, target1))
 
 
 
+nums = [1,2,4,6,7,8,8,0]
+target = 9  
+function indices(first, second){
+    for (let i = 0; i < first.length; i++){
+        for (let j= i + 1; j < first.length; j++){
+            if (first[i]+first[j]==second)
+                return [i, j]
+        }
+    }
+}
+console.log(indices(nums, target))
 
+
+nums1 = 
+target1 = 17 
+function indices(first, second){
+    for (let i = 0; i < first.length; i++){
+        for (let j= i + 1; j < first.length; j++){
+            if (first[i]+first[j]==second)
+                return [i, j]
+            else {console.log("no match")}
+        }
+    }
+}
+console.log(indices([1,2,4,6,7,8,8,0], 17))
+console.log(indices([1,2,4,6,7,8,8,0], 9))
